@@ -1,6 +1,5 @@
 <?php
-    include "database.php";
-    include "HeaderFooter/Header.html";
+    include "header_footer/header.html";
 ?>
 
 <!DOCTYPE html>
@@ -122,5 +121,5 @@
 </html>
 
 <?php
-    include "HeaderFooter/Footer.html";
+    include "header_footer/footer.html";
 ?>
