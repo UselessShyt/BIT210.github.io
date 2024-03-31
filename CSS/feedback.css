@@ -66,4 +66,9 @@
 .survey-option {
     margin-bottom: 1em;
     margin-right: 0.25em;
+
+/* Custom CSS to adjust the width of the form */
+.form-control.adjust-width {
+    width: 100%; /* Adjust the width as needed */
+
 }
