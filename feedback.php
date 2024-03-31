@@ -40,16 +40,16 @@
             <p class="content">Your feedback will play a crucial role in shaping the future development of our app. By sharing your thoughts, suggestions, and concerns, you will directly influence the enhancements and updates we make. Your input will help us prioritize features, identify areas for improvement, and ensure that our app aligns with your preferences and expectations.</p>
         </div>
     </div>
-    <div id="container5">
-        <h2 class="content-title" style="margin-bottom: 1em;">Survey</h2>
-        <div class="form-container">
-            <div class="form-container1">
-                <h3 class="survey-option">User Interface: </h3>
-                <h3 class="survey-option">Feature Satisfaction: </h3>
-                <h3 class="survey-option">Preferences: </h3>
-            </div>
-            <div class="form-container2">
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" style="margin: 0;">
+        <div id="container5">
+            <h2 class="content-title" style="margin-bottom: 1em;">Survey</h2>
+            <div class="form-container">
+                <div class="form-container1">
+                    <h3 class="survey-option">User Interface: </h3>
+                    <h3 class="survey-option">Feature Satisfaction: </h3>
+                    <h3 class="survey-option">Preferences: </h3>
+                </div>
+                <div class="form-container2">
                     <div>
                         <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                             <input type="radio" class="btn-check" name="survey" id="ui_1" autocomplete="off" value="ui_1">
@@ -142,33 +142,26 @@
                     <label for="p_4">4</label>
                     <input type="radio" id="p_5" name="preferences" value="p_5">
                     <label for="p_5">5</label> -->
-                </form>
-                <div id="container6">
-                    <h2 class="content-title">Feedback form</h2><br><br>
-                    <div class="content-container">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-13 mx-auto"> <!-- Center the form horizontally -->
-                                    <form>
-                                        <div class="mb-3">
-                                            <label for="feedback" class="form-label">Your Feedback:</label>
-                                            <textarea class="form-control " id="feedback" rows="5" required></textarea>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
-                                    </form>
-                                </div>
-                            </div>
+                </div>
+            </div>
+        <div id="container6">
+        <h2 class="content-title">Feedback form</h2><br><br>
+        <div class="content-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-13 mx-auto"> <!-- Center the form horizontally -->
+                        <div class="mb-3">
+                            <label for="feedback" style="font-size: larger;"><b>Your Feedback:</b></label>
+                            <textarea class="form-control " id="feedback" rows="5" required></textarea>
                         </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
-
-                 </div>
+                </div>
             </div>
         </div>
-    </div>
-    
+    </form>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
-
 </html>
 
 <?php

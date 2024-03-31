@@ -50,7 +50,6 @@
 
 #container5 {
     background-color: #faf9ef;
-    padding-bottom: 5em;
     padding-top: 5em;
 }
 
@@ -66,9 +65,14 @@
 .survey-option {
     margin-bottom: 1em;
     margin-right: 0.25em;
+}
 
-/* Custom CSS to adjust the width of the form */
+#container6 {
+    background-color: #788353;
+    padding-bottom: 5em;
+    padding-top: 5em;
+}
+
 .form-control.adjust-width {
-    width: 100%; /* Adjust the width as needed */
-
+    width: 100%;
 }
