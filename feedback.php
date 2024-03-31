@@ -134,9 +134,29 @@
                     <input type="radio" id="p_5" name="preferences" value="p_5">
                     <label for="p_5">5</label> -->
                 </form>
+                <div id="container6">
+                    <h2 class="content-title">Feedback form</h2><br><br>
+                    <div class="content-container">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-13 mx-auto"> <!-- Center the form horizontally -->
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="feedback" class="form-label">Your Feedback:</label>
+                                            <textarea class="form-control " id="feedback" rows="5" required></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                 </div>
             </div>
         </div>
     </div>
+    
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
