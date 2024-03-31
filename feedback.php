@@ -41,63 +41,72 @@
         </div>
     </div>
     <div id="container5">
-        <h2 class="content-title">Survey</h2>
-        <div>
-            <div>
-                <h6>User Interface</h6>
+        <h2 class="content-title" style="margin-bottom: 1em;">Survey</h2>
+        <div class="form-container">
+            <div class="form-container1">
+                <h3 class="survey-option">User Interface: </h3>
+                <h3 class="survey-option">Feature Satisfaction: </h3>
+                <h3 class="survey-option">Preferences: </h3>
             </div>
-            <div>
+            <div class="form-container2">
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                        <input type="radio" class="btn-check" name="survey" id="ui_1" autocomplete="off" value="ui_1">
-                        <label class="btn btn-outline-primary" for="ui_1">1</label>
+                    <div>
+                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                            <input type="radio" class="btn-check" name="survey" id="ui_1" autocomplete="off" value="ui_1">
+                            <label class="btn btn-outline-primary" for="ui_1">1</label>
 
-                        <input type="radio" class="btn-check" name="survey" id="ui_2" autocomplete="off" value="ui_2">
-                        <label class="btn btn-outline-primary" for="ui_2">2</label>
+                            <input type="radio" class="btn-check" name="survey" id="ui_2" autocomplete="off" value="ui_2">
+                            <label class="btn btn-outline-primary" for="ui_2">2</label>
 
-                        <input type="radio" class="btn-check" name="survey" id="ui_3" autocomplete="off" value="ui_3">
-                        <label class="btn btn-outline-primary" for="ui_3">3</label>
+                            <input type="radio" class="btn-check" name="survey" id="ui_3" autocomplete="off" value="ui_3">
+                            <label class="btn btn-outline-primary" for="ui_3">3</label>
 
-                        <input type="radio" class="btn-check" name="survey" id="ui_4" autocomplete="off" value="ui_4">
-                        <label class="btn btn-outline-primary" for="ui_4">4</label>
+                            <input type="radio" class="btn-check" name="survey" id="ui_4" autocomplete="off" value="ui_4">
+                            <label class="btn btn-outline-primary" for="ui_4">4</label>
 
-                        <input type="radio" class="btn-check" name="survey" id="ui_5" autocomplete="off" value="ui_5">
-                        <label class="btn btn-outline-primary" for="ui_5">5</label>
+                            <input type="radio" class="btn-check" name="survey" id="ui_5" autocomplete="off" value="ui_5">
+                            <label class="btn btn-outline-primary" for="ui_5">5</label>
+                        </div>
                     </div>
+                    <br>
+                    <div>
+                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                            <input type="radio" class="btn-check" name="feature_satisfaction" id="fs_1" autocomplete="off" value="fs_1">
+                            <label class="btn btn-outline-primary" for="fs_1">1</label>
 
-                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                        <input type="radio" class="btn-check" name="feature_satisfaction" id="fs_1" autocomplete="off" value="fs_1">
-                        <label class="btn btn-outline-primary" for="fs_1">1</label>
+                            <input type="radio" class="btn-check" name="feature_satisfaction" id="fs_2" autocomplete="off" value="fs_2">
+                            <label class="btn btn-outline-primary" for="fs_2">2</label>
 
-                        <input type="radio" class="btn-check" name="feature_satisfaction" id="fs_2" autocomplete="off" value="fs_2">
-                        <label class="btn btn-outline-primary" for="fs_2">2</label>
+                            <input type="radio" class="btn-check" name="feature_satisfaction" id="fs_3" autocomplete="off" value="fs_3">
+                            <label class="btn btn-outline-primary" for="fs_3">3</label>
 
-                        <input type="radio" class="btn-check" name="feature_satisfaction" id="fs_3" autocomplete="off" value="fs_3">
-                        <label class="btn btn-outline-primary" for="fs_3">3</label>
+                            <input type="radio" class="btn-check" name="feature_satisfaction" id="fs_4" autocomplete="off" value="fs_4">
+                            <label class="btn btn-outline-primary" for="fs_4">4</label>
 
-                        <input type="radio" class="btn-check" name="feature_satisfaction" id="fs_4" autocomplete="off" value="fs_4">
-                        <label class="btn btn-outline-primary" for="fs_4">4</label>
-
-                        <input type="radio" class="btn-check" name="feature_satisfaction" id="fs_5" autocomplete="off" value="fs_5">
-                        <label class="btn btn-outline-primary" for="fs_5">5</label>
+                            <input type="radio" class="btn-check" name="feature_satisfaction" id="fs_5" autocomplete="off" value="fs_5">
+                            <label class="btn btn-outline-primary" for="fs_5">5</label>
+                        </div>
                     </div>
+                    <br>
+                    <div>
+                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                            <input type="radio" class="btn-check" name="preferences" id="p_1" autocomplete="off" value="p_1">
+                            <label class="btn btn-outline-primary" for="p_1">1</label>
 
-                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                        <input type="radio" class="btn-check" name="preferences" id="p_1" autocomplete="off" value="p_1">
-                        <label class="btn btn-outline-primary" for="p_1">1</label>
+                            <input type="radio" class="btn-check" name="preferences" id="p_2" autocomplete="off" value="p_2">
+                            <label class="btn btn-outline-primary" for="p_2">2</label>
 
-                        <input type="radio" class="btn-check" name="preferences" id="p_2" autocomplete="off" value="p_2">
-                        <label class="btn btn-outline-primary" for="p_2">2</label>
+                            <input type="radio" class="btn-check" name="preferences" id="p_3" autocomplete="off" value="p_3">
+                            <label class="btn btn-outline-primary" for="p_3">3</label>
 
-                        <input type="radio" class="btn-check" name="preferences" id="p_3" autocomplete="off" value="p_3">
-                        <label class="btn btn-outline-primary" for="p_3">3</label>
+                            <input type="radio" class="btn-check" name="preferences" id="p_4" autocomplete="off" value="p_4">
+                            <label class="btn btn-outline-primary" for="p_4">4</label>
 
-                        <input type="radio" class="btn-check" name="preferences" id="p_4" autocomplete="off" value="p_4">
-                        <label class="btn btn-outline-primary" for="p_4">4</label>
-
-                        <input type="radio" class="btn-check" name="preferences" id="p_5" autocomplete="off" value="p_5">
-                        <label class="btn btn-outline-primary" for="p_5">5</label>
+                            <input type="radio" class="btn-check" name="preferences" id="p_5" autocomplete="off" value="p_5">
+                            <label class="btn btn-outline-primary" for="p_5">5</label>
+                        </div>
                     </div>
+                    
                     <!-- <label>User Interface: </label>
                     <input type="radio" id="ui_1" name="survey" value="ui_1">
                     <label for="ui_1">1</label>
