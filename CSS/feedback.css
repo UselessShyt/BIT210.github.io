@@ -53,3 +53,8 @@
     padding-bottom: 5em;
     padding-top: 5em;
 }
+
+/* Custom CSS to adjust the width of the form */
+.form-control.adjust-width {
+    width: 100%; /* Adjust the width as needed */
+}
