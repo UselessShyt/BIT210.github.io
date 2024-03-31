@@ -28,6 +28,7 @@
     margin-top: 0;
     margin-bottom: 0;
     width: 50%;
+    text-align: center;
 }
 
 #container2 {
@@ -51,6 +52,7 @@
 #container5 {
     background-color: #faf9ef;
     padding-top: 5em;
+    padding-bottom: 5em;
 }
 
 .form-container {

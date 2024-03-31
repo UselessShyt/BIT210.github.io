@@ -1,6 +1,7 @@
 <?php
     include "../database.php";
     include "../header_footer/header.html";
+    include "../url_loader.php";
 ?>
 
 <!DOCTYPE html>

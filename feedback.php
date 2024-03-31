@@ -1,5 +1,6 @@
 <?php
     include "header_footer/header.html";
+    include "database.php";
 ?>
 
 <!DOCTYPE html>
@@ -14,6 +15,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script>
+        if ( window.history.replaceState ) {
+            window.history.replaceState( null, null, window.location.href );
+        }
+    </script>
 </head>
 <body>
     <div style="height: 7.5em;"></div>
@@ -40,7 +46,7 @@
             <p class="content">Your feedback will play a crucial role in shaping the future development of our app. By sharing your thoughts, suggestions, and concerns, you will directly influence the enhancements and updates we make. Your input will help us prioritize features, identify areas for improvement, and ensure that our app aligns with your preferences and expectations.</p>
         </div>
     </div>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" style="margin: 0;">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" style="margin: 0;" method="post">
         <div id="container5">
             <h2 class="content-title" style="margin-bottom: 1em;">Survey</h2>
             <div class="form-container">
@@ -52,109 +58,63 @@
                 <div class="form-container2">
                     <div>
                         <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                            <input type="radio" class="btn-check" name="survey" id="ui_1" autocomplete="off" value="ui_1">
+                            <input type="radio" class="btn-check" name="user_interface" id="ui_1" autocomplete="off" value="1" required>
                             <label class="btn btn-outline-primary" for="ui_1">1</label>
-
-                            <input type="radio" class="btn-check" name="survey" id="ui_2" autocomplete="off" value="ui_2">
+                            <input type="radio" class="btn-check" name="user_interface" id="ui_2" autocomplete="off" value="2" required>
                             <label class="btn btn-outline-primary" for="ui_2">2</label>
-
-                            <input type="radio" class="btn-check" name="survey" id="ui_3" autocomplete="off" value="ui_3">
+                            <input type="radio" class="btn-check" name="user_interface" id="ui_3" autocomplete="off" value="3" required>
                             <label class="btn btn-outline-primary" for="ui_3">3</label>
-
-                            <input type="radio" class="btn-check" name="survey" id="ui_4" autocomplete="off" value="ui_4">
+                            <input type="radio" class="btn-check" name="user_interface" id="ui_4" autocomplete="off" value="4" required>
                             <label class="btn btn-outline-primary" for="ui_4">4</label>
-
-                            <input type="radio" class="btn-check" name="survey" id="ui_5" autocomplete="off" value="ui_5">
+                            <input type="radio" class="btn-check" name="user_interface" id="ui_5" autocomplete="off" value="5" required>
                             <label class="btn btn-outline-primary" for="ui_5">5</label>
                         </div>
                     </div>
                     <br>
                     <div>
                         <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                            <input type="radio" class="btn-check" name="feature_satisfaction" id="fs_1" autocomplete="off" value="fs_1">
+                            <input type="radio" class="btn-check" name="feature_satisfaction" id="fs_1" autocomplete="off" value="1" required>
                             <label class="btn btn-outline-primary" for="fs_1">1</label>
-
-                            <input type="radio" class="btn-check" name="feature_satisfaction" id="fs_2" autocomplete="off" value="fs_2">
+                            <input type="radio" class="btn-check" name="feature_satisfaction" id="fs_2" autocomplete="off" value="2" required>
                             <label class="btn btn-outline-primary" for="fs_2">2</label>
-
-                            <input type="radio" class="btn-check" name="feature_satisfaction" id="fs_3" autocomplete="off" value="fs_3">
+                            <input type="radio" class="btn-check" name="feature_satisfaction" id="fs_3" autocomplete="off" value="3" required>
                             <label class="btn btn-outline-primary" for="fs_3">3</label>
-
-                            <input type="radio" class="btn-check" name="feature_satisfaction" id="fs_4" autocomplete="off" value="fs_4">
+                            <input type="radio" class="btn-check" name="feature_satisfaction" id="fs_4" autocomplete="off" value="4" required>
                             <label class="btn btn-outline-primary" for="fs_4">4</label>
-
-                            <input type="radio" class="btn-check" name="feature_satisfaction" id="fs_5" autocomplete="off" value="fs_5">
+                            <input type="radio" class="btn-check" name="feature_satisfaction" id="fs_5" autocomplete="off" value="5" required>
                             <label class="btn btn-outline-primary" for="fs_5">5</label>
                         </div>
                     </div>
                     <br>
                     <div>
-                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                            <input type="radio" class="btn-check" name="preferences" id="p_1" autocomplete="off" value="p_1">
+                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group" >
+                            <input type="radio" class="btn-check" name="preferences" id="p_1" autocomplete="off" value="1" required>
                             <label class="btn btn-outline-primary" for="p_1">1</label>
-
-                            <input type="radio" class="btn-check" name="preferences" id="p_2" autocomplete="off" value="p_2">
+                            <input type="radio" class="btn-check" name="preferences" id="p_2" autocomplete="off" value="2" required>
                             <label class="btn btn-outline-primary" for="p_2">2</label>
-
-                            <input type="radio" class="btn-check" name="preferences" id="p_3" autocomplete="off" value="p_3">
+                            <input type="radio" class="btn-check" name="preferences" id="p_3" autocomplete="off" value="3" required>
                             <label class="btn btn-outline-primary" for="p_3">3</label>
-
-                            <input type="radio" class="btn-check" name="preferences" id="p_4" autocomplete="off" value="p_4">
+                            <input type="radio" class="btn-check" name="preferences" id="p_4" autocomplete="off" value="4" required>
                             <label class="btn btn-outline-primary" for="p_4">4</label>
-
-                            <input type="radio" class="btn-check" name="preferences" id="p_5" autocomplete="off" value="p_5">
+                            <input type="radio" class="btn-check" name="preferences" id="p_5" autocomplete="off" value="5" required>
                             <label class="btn btn-outline-primary" for="p_5">5</label>
                         </div>
                     </div>
-                    
-                    <!-- <label>User Interface: </label>
-                    <input type="radio" id="ui_1" name="survey" value="ui_1">
-                    <label for="ui_1">1</label>
-                    <input type="radio" id="ui_2" name="survey" value="ui_2">
-                    <label for="ui_2">2</label>
-                    <input type="radio" id="ui_3" name="survey" value="ui_3">
-                    <label for="ui_3">3</label>
-                    <input type="radio" id="ui_4" name="survey" value="ui_4">
-                    <label for="ui_4">4</label>
-                    <input type="radio" id="ui_5" name="survey" value="ui_5">
-                    <label for="ui_5">5</label>
-                    <br>
-                    <label>Feature Satisfaction: </label>
-                    <input type="radio" id="fs_1" name="feature_satisfaction" value="fs_1">
-                    <label for="fs_1">1</label>
-                    <input type="radio" id="fs_2" name="feature_satisfaction" value="fs_2">
-                    <label for="fs_2">2</label>
-                    <input type="radio" id="fs_3" name="feature_satisfaction" value="fs_3">
-                    <label for="fs_3">3</label>
-                    <input type="radio" id="fs_4" name="feature_satisfaction" value="fs_4">
-                    <label for="fs_4">4</label>
-                    <input type="radio" id="fs_5" name="feature_satisfaction" value="fs_5">
-                    <label for="fs_5">5</label>
-                    <br>
-                    <label>Preferences: </label>
-                    <input type="radio" id="p_1" name="preferences" value="p_1">
-                    <label for="p_1">1</label>
-                    <input type="radio" id="p_2" name="preferences" value="p_2">
-                    <label for="p_2">2</label>
-                    <input type="radio" id="p_3" name="preferences" value="p_3">
-                    <label for="p_3">3</label>
-                    <input type="radio" id="p_4" name="preferences" value="p_4">
-                    <label for="p_4">4</label>
-                    <input type="radio" id="p_5" name="preferences" value="p_5">
-                    <label for="p_5">5</label> -->
                 </div>
             </div>
+        </div>
         <div id="container6">
-        <h2 class="content-title">Feedback form</h2><br><br>
-        <div class="content-container">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-13 mx-auto"> <!-- Center the form horizontally -->
-                        <div class="mb-3">
-                            <label for="feedback" style="font-size: larger;"><b>Your Feedback:</b></label>
-                            <textarea class="form-control " id="feedback" rows="5" required></textarea>
+            <h2 class="content-title">Feedback Form</h2><br>
+            <div class="content-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-13 mx-auto">
+                            <div class="mb-3">
+                                <label for="feedback" style="font-size: larger;"><b>Your Feedback:</b></label>
+                                <textarea class="form-control " id="feedback" rows="20" name="feedback"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </div>
             </div>
@@ -166,4 +126,16 @@
 
 <?php
     include "header_footer/footer.html";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $user_interface = $_POST["user_interface"];
+        $feature = $_POST["feature_satisfaction"];
+        $preference = $_POST["preferences"];
+        $feedback = $_POST["feedback"];
+
+        $sql = ("INSERT INTO `user_feedback`(`user_interface`, `feature_satisfaction`, `preferences`, `feedback`) VALUES ('$user_interface','$feature','$preference','$feedback')");
+        mysqli_query($conn, $sql);
+
+        echo "<script>alert('Submitted');</script>";
+    }
 ?>
